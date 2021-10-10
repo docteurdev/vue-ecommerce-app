@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <title>Vue Project</title>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+  <title>Vue Project</title>
 
-    <link rel="icon" href="./assets/img/vueLogo.png" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
-    <link href="./assets/style/style.css" rel="stylesheet" />
-  </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <body>
+  <link rel="icon" href="./assets/img/vueLogo.png" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+  <link href="./assets/style/style.css" rel="stylesheet" />
+</head>
 
-    <div id="app">
-      <nav>
-        <div class="nav-container">
-          <div id="logo">
-            <router-link to = "/">
-              <img src="./assets/img/wish-logo-800.png" alt="logo" />
-            </router-link>
-          </div>
-  
-          <ul id="icons">
-            <li>
-              <router-link to = "/user">
+<body>
+
+  <div id="app">
+    <nav>
+      <div class="nav-container">
+        <div id="logo">
+          <router-link to="/">
+            <img src="./assets/img/wish-logo-800.png" alt="logo" />
+          </router-link>
+        </div>
+
+        <ul id="icons">
+          <li>
+            <router-link to="/user">
               <i class="fas fa-user"></i>
             </router-link>
-            </li>
-            <li>
-              <router-link to = "/wish">
+          </li>
+          <li>
+            <router-link to="/wish">
               <i class="fas fa-heart"></i>
             </router-link>
-              <span id="nav-not"></span>
-            </li>
-            <li>
-              <router-link to = "/cart">
+            <span id="nav-not"></span>
+          </li>
+          <li>
+            <router-link to="/cart">
               <i class="fas fa-shopping-cart"></i>
             </router-link>
 
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <router-view></router-view>
-  
-    </div>
-    <script type = "text/x-template" id="Home" >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <router-view></router-view>
+
+  </div>
+  <script type="text/x-template" id="Home">
       <div class="home-container">
         <!-- <h3  >Aucun résultat trouvé</h3> -->
         <h1>articles</h1>
@@ -91,6 +92,7 @@
                     <i class="fas fa-shopping-cart"></i>
                   </button>
                 </div>
+                
 
               </div>
             </div>
@@ -111,17 +113,22 @@
                 </div>
                 <div class="item-description">
                   <h4>{{product.description}}</h4>
-                  <p> {{product.price}} </p> 
+                  <p> {{product.price}} </p>
                 </div>
+                <div class="item-quantity">
+                  <h3>quantité: {{product.quantity}}</h3>
+                </div>                
               </div>
             </div>
           </div>
         </div>
       </div>
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-    <script src="https://unpkg.com/vue-cookies@1.7.4/vue-cookies.js"></script>    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/vue.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="https://unpkg.com/vue-cookies@1.7.4/vue-cookies.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/vue.js"></script>
+</body>
+
 </html>

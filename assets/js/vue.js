@@ -49,15 +49,13 @@ const Home  = {
                   if(this.cart[i].id === produit.id){
                       return this.cart[i].quantity++
                   }
-                    this.cart.push({
-                        id: produit.id,
-                        description: produit.description,
-                        price: produit.price,
-                        img: produit.img,
-                        quantity: 1
-                    })
-                
-               }
+               } this.cart.push({
+                id: produit.id,
+                description: produit.description,
+                price: produit.price,
+                img: produit.img,
+                quantity: 1
+            })
         }
     },
     mounted: () =>{
